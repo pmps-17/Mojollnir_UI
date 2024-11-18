@@ -1,0 +1,48 @@
+<div class="summary-container">
+    <div class="summary-card">
+        <h2>Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Cycles</th>
+          <th>Time</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of summaryDetails">
+          <td>{{ item.type }}</td>
+          <td>{{ item.cycles }}</td>
+          <td>{{ item.time }}</td>
+          <td>₹{{ item.price }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <div class="totals">
+        <div class="totals-row">
+          <span>Total Usage</span>
+          <span>₹{{ totalUsage }}</span>
+        </div>
+        <div class="totals-row">
+          <span>Paid Amount</span>
+          <span>₹{{ paidAmount }}</span>
+        </div>
+        <div class="totals-row">
+          <span>Security Deposit</span>
+          <span>₹{{ securityDeposit }}</span>
+        </div>
+    </div>
+    </div>
+    <div class="summary-buttons">
+        <button class="refund-btn">
+            Refundable Amount : ₹{{ refundableAmount }}
+          </button>
+          <button class="collect-btn">
+            Collection Amount : ₹{{ collectionAmount }}
+          </button>
+      </div>
+  </div>
+
+  

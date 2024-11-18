@@ -1,0 +1,78 @@
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-12">
+
+            <div class="text-center mb-4">
+                <h2>User Listing</h2>
+            </div>
+
+            <!-- Table Card -->
+            <div class="card shadow-lg border-0 rounded-lg">
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table mat-table [dataSource]="dataSource" class="table table-bordered table-hover mb-0">
+
+                            <!-- Username Column -->
+                            <ng-container matColumnDef="username">
+                                <th mat-header-cell *matHeaderCellDef> User Name </th>
+                                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                            </ng-container>
+
+                            <!-- Name Column -->
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef> Name </th>
+                                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                            </ng-container>
+
+                            <!-- Email Column -->
+                            <ng-container matColumnDef="email">
+                                <th mat-header-cell *matHeaderCellDef> Email </th>
+                                <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                            </ng-container>
+
+                            <!-- Status Column -->
+                            <ng-container matColumnDef="status">
+                                <th mat-header-cell *matHeaderCellDef> Status </th>
+                                <td mat-cell *matCellDef="let element">
+                                    <span class="badge"
+                                        [ngClass]="element.isactive ? 'badge-success' : 'badge-secondary'">
+                                        {{element.isactive ? 'Active' : 'In Active'}}
+                                    </span>
+                                </td>
+                            </ng-container>
+
+                            <!-- Role Column -->
+                            <ng-container matColumnDef="role">
+                                <th mat-header-cell *matHeaderCellDef> Role </th>
+                                <td mat-cell *matCellDef="let element">
+                                    {{element.role === '' ? 'Unassigned' : element.role}}
+                                </td>
+                            </ng-container>
+
+                            <!-- Action Column -->
+                            <ng-container matColumnDef="action">
+                                <th mat-header-cell *matHeaderCellDef> Action </th>
+                                <td mat-cell *matCellDef="let element">
+                                    <button *ngIf="element.role!='admin'" (click)="updateUser(element.id)" mat-raised-button color="primary"
+                                        class="px-3">Update</button>
+                                </td>
+                            </ng-container>
+
+                            <!-- Header and Row Definitions -->
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Paginator -->
+                <div class="card-footer d-flex justify-content-center py-3">
+                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+                        aria-label="Select page of user records" class="w-100 paginator-responsive">
+                    </mat-paginator>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

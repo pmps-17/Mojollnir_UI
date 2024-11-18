@@ -1,0 +1,131 @@
+{
+  "user": [
+    {
+      "id": "Admin",
+      "name": "Rishwak Naidu",
+      "password": "Test@1234",
+      "email": "rish@gmail.com",
+      "gender": "male",
+      "role": "admin",
+      "isactive": true
+    },
+    {
+      "id": "test1",
+      "name": "user",
+      "password": "Test@1234",
+      "email": "user@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "test2",
+      "name": "user2",
+      "password": "Test@1234",
+      "email": "user@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "test3",
+      "name": "user3",
+      "password": "Test@1234",
+      "email": "user@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "test4",
+      "name": "user4",
+      "password": "Test@1234",
+      "email": "user@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "test5",
+      "name": "user5",
+      "password": "Test@1234",
+      "email": "user@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "",
+      "name": "",
+      "password": "",
+      "email": "",
+      "gender": "male",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "",
+      "name": "",
+      "password": "",
+      "email": "",
+      "gender": "male",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "",
+      "name": "",
+      "password": "",
+      "email": "",
+      "gender": "male",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "",
+      "name": "",
+      "password": "",
+      "email": "",
+      "gender": "male",
+      "role": "counter",
+      "isactive": true
+    },
+    {
+      "id": "",
+      "name": "",
+      "password": "",
+      "email": "",
+      "gender": "male",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "Rakesh",
+      "name": "Rakesh Sharma",
+      "password": "Raki@1234",
+      "email": "raki@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "",
+      "name": "",
+      "password": "",
+      "email": "",
+      "gender": "male",
+      "role": "user",
+      "isactive": true
+    }
+  ],
+  "role": [
+    {
+      "id": "user",
+      "name": "User"
+    },
+    {
+      "id": "counter",
+      "name": "Counter"
+    }
+  ]
+}

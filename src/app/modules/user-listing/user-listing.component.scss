@@ -1,0 +1,10 @@
+/* Add this to your global or component-specific CSS file */
+.paginator-responsive .mat-paginator-container {
+    flex-direction: column;
+}
+
+.paginator-responsive .mat-paginator-page-size,
+.paginator-responsive .mat-paginator-range-actions {
+    display: flex;
+    justify-content: center;
+}

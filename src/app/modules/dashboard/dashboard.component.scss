@@ -1,0 +1,154 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-img-top {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .card-text {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .d-flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn {
+    padding: 8px 15px;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .me-2 {
+    margin-right: 10px;
+  }
+  
+  .ms-2 {
+    margin-left: 10px;
+  }
+  
+  .mx-2 {
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .count-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  /* Highlighted Price Styling */
+  .highlighted-price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #28a745;
+    background-color: #e9f5e9;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .btn-payment {
+    background-color: #28a745;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-payment:hover {
+    background-color: #218838;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.2s ease-in-out;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* General row margin */
+  .row {
+    margin-top: 20px;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .card {
+      margin-bottom: 15px;
+    }
+    .card-title {
+      font-size: 16px;
+    }
+    .card-text {
+      font-size: 13px; 
+    }
+    .highlighted-price {
+      font-size: 1.2em;
+    }
+    .btn-payment {
+      padding: 10px;
+    }
+  }
+  

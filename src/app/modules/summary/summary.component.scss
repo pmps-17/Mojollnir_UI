@@ -1,0 +1,80 @@
+.summary-container {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #faf8f8;
+    background-color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .summary-card {
+    color:  #494848;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #e6fcf4;
+    margin-bottom: 30px;
+ 
+  }
+  
+  table {
+    width: 100%;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  table th {
+    font-weight: bold;
+  }
+  
+  hr {
+    margin: 15px 0;
+  }
+  
+  .totals {
+    margin-bottom: 20px;
+  }
+  
+  .totals-row {
+    display: flex;
+    justify-content: space-between; /* Aligns text to the left and amount to the right */
+    padding: 5px 0;
+    color: #494848;
+  }
+  
+  .totals-row span {
+    flex: 1; /* Makes sure the content is aligned properly */
+  }
+  
+  button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .summary-buttons{
+    background-color:  white;
+
+  }
+  
+  .refund-btn {
+    background-color: #039e70;
+    color: #353434;
+  }
+  
+  .collect-btn {
+    background-color: #353434;
+    color: #039e70;
+  }
+  

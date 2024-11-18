@@ -1,0 +1,120 @@
+/* Full Page Background and Layout */
+.landing-page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url('../../../assets/images/Cycle-bg.jpeg') no-repeat center center/cover;
+    font-family: 'Arial', sans-serif;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+/* Button Section */
+.button-section {
+    z-index: 1;
+    display: flex;
+    gap: 15px; /* Consistent spacing between buttons */
+}
+
+.login-btn {
+    font-size: 1em;
+    background: none;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background-color: #00ae71;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Right-Side Login Form Section */
+.login-form-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    max-width: 500px;
+}
+
+h2 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input::placeholder {
+    color: #888;
+    font-weight: bold;
+}
+
+.form-group input:focus {
+    border-color: #00ae71;
+    box-shadow: 0px 0px 8px rgba(0, 174, 113, 0.4);
+}
+
+.submit-btn {
+    background-color: #00ae71;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #007b55;
+    transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .button-section {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .login-btn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+
+@media (min-width: 769px) {
+    .button-section {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .login-btn {
+        padding: 15px 24px; /* Ensure same padding on larger screens */
+    }
+}

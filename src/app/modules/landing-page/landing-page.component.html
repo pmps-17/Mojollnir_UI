@@ -1,0 +1,36 @@
+<div class="landing-page d-flex align-items-center justify-content-center">
+    <!-- Background Image Overlay -->
+    <div class="overlay"></div>
+
+    <div class="container d-flex flex-column flex-md-row align-items-center">
+        <!-- Button Section -->
+        <div class="button-section col-12 col-md-4 d-flex order-0 order-md-1">
+            <button class="login-btn" (mouseenter)="hoverLogin('User')">User Login</button>
+            <button class="login-btn" (mouseenter)="hoverLogin('Counter')">Counter Login</button>
+            <button class="login-btn" (mouseenter)="hoverLogin('Admin')">Admin Login</button>
+        </div>
+
+        <!-- Login Form Section -->
+        <div class="login-form-section col-12 col-md-7 mb-4 order-1 order-md-0">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <h2 class="text-center">{{ hoverText }} Login</h2>
+                <div class="form-group mb-3">
+                    <input type="text" formControlName="firstName" placeholder="First Name" required>
+                </div>
+                <div class="form-group mb-3">
+                    <input type="text" formControlName="lastName" placeholder="Last Name" required>
+                </div>
+                <div class="form-group mb-3">
+                    <input type="email" formControlName="email" placeholder="Email" required>
+                </div>
+                <div class="form-group mb-3">
+                    <input type="tel" formControlName="phoneNumber" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group mb-3">
+                    <input type="text" formControlName="location" placeholder="Location" required>
+                </div>
+                <button type="submit" class="submit-btn w-100">Login</button>
+            </form>
+        </div>
+    </div>
+</div>

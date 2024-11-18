@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <h1 mat-dialog-title class="text-center mb-4">Update User</h1>
+
+    <form [formGroup]="registerform" (ngSubmit)="updateUser()">
+        <div mat-dialog-content class="px-3">
+
+            <!-- Role Selection Field -->
+            <div class="form-group mb-4">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Role</mat-label>
+                    <mat-select formControlName="role">
+                        <mat-option value="">Select Role</mat-option>
+                        <mat-option *ngFor="let item of rolelist" [value]="item.id">
+                            {{item.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <!-- Active Status Checkbox -->
+            <div class="form-group d-flex align-items-center mb-4">
+                <mat-checkbox formControlName="isactive" class="example-margin">Is Active</mat-checkbox>
+            </div>
+
+        </div>
+
+        <!-- Actions Section -->
+        <div mat-dialog-actions class="d-flex justify-content-end px-3 mt-3">
+            <button type="submit" mat-raised-button color="primary" class="mr-2">Save</button>
+            <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        </div>
+    </form>
+</div>
