@@ -16,6 +16,7 @@ import { RegisterComponent } from './modules/register/register.component';
 import { LoginComponent } from './modules/login/login.component';
 import { UserListingComponent } from './modules/user-listing/user-listing.component';
 import { PopupComponent } from './layout/popup/popup.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,9 @@ import { PopupComponent } from './layout/popup/popup.component';
     MaterialModule,
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

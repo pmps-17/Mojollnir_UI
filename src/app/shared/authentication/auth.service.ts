@@ -7,19 +7,28 @@ import { HttpClient } from '@angular/common/http';
 export class AuthService {
 
   constructor(private http: HttpClient) { }
-  apiUrl = 'http://localhost:3000/user';
+  apiUrl = 'https://vendor-zoo.coffeecodes.in/v1/vendor/';
 
   GetAll(){
     return  this.http.get(this.apiUrl);
   }
 
-  GetbyCode(code:any){
-    return  this.http.get(this.apiUrl + '?id=' + code);
+  GetbyCode(inputdata:any){
+    return  this.http.post(this.apiUrl + 'login', inputdata);
   }
 
-  Proceedregister(inputdata:any){
-    return this.http.post(this.apiUrl, inputdata);
+  GetOtp(inputdata:any){
+    return  this.http.post(this.apiUrl + 'verify_otp', inputdata);
   }
+
+  Proceedregister(inputdata: any, token: string) {
+    const headers = { Authorization: `Bearer ${token}` };
+    return this.http.post(this.apiUrl + 'register', inputdata, { headers });
+  }
+
+  // Proceedregister(inputdata:any){
+  //   return this.http.post(this.apiUrl + 'register', inputdata);
+  // }
 
   UpdateUser(code:any, inputdata:any){
     return this.http.post(this.apiUrl + '/' + code, inputdata);
